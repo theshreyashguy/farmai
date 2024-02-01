@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ArticleActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="26sp"
+            android:padding="16dp"
+            android:text="Article Title Here" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="author - Team Arya AI"
+            android:padding="2dp"
+            android:layout_marginStart="13dp"/>
+
+        <ImageView
+            android:id="@+id/imgview"
+            android:layout_width="match_parent"
+            android:layout_height="290dp"
+            android:scaleType="centerInside" />
+
+
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:padding="20dp"
+            android:text="Article Title Here"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+</ScrollView>

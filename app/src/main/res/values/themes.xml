@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Farmai" parent="android:Theme.Material.Light.NoActionBar" />
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Farmai" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.Farmai.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Farmai.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+<!--    <style name="Base.Theme.Farmai.newbar" parent="Theme.AppCompat.Light.DarkActionBar" />-->
+    <style name="Base.Theme.Farmai.newbar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#090909</item> <!-- Change to black color -->
+        <item name="android:background">#FAFBF9</item> <!-- Set the background color -->
+        <item name="titleTextColor">@color/black</item>
+
+    </style>
+
+    <style name="BottomNavTheme" parent="Widget.Design.BottomNavigationView">
+        <item name="android:background">#FAFBF9</item> <!-- Set the background color to black -->
+        <item name="itemTextColor">@color/black</item> <!-- Set the text color to white for unselected items -->
+        <item name="itemIconTint">@color/black</item> <!-- Set the icon color to white for unselected items -->
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+
+
+    <style name="Theme.Farmai.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Base.Theme.Farmai.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Base.Theme.Farmai.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Base.Theme.Farmai.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

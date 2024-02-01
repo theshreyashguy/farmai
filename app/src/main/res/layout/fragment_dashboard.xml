@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ui.dashboard.DashboardFragment">
+
+<HorizontalScrollView
+    android:id="@+id/buttonScrollView"
+    android:layout_width="match_parent"
+    android:layout_marginTop="6dp"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/Soil"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_corner_button1"
+            android:textColor="@color/white"
+            android:textSize="11dp"
+            android:text="Soil Moisture"
+            />
+
+        <Button
+            android:id="@+id/Rain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_corner_button"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            android:text="Rain drops"
+            />
+        <Button
+            android:id="@+id/temperature"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_corner_button"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            android:text="Temperature"
+            />
+        <Button
+            android:id="@+id/humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:background="@drawable/rounded_corner_button"
+            android:textSize="11dp"
+            android:text="Humidity"
+            />
+        <Button
+            android:id="@+id/pump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_corner_button"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            android:text="Water pump"
+            />
+    </LinearLayout>
+</HorizontalScrollView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="58dp"
+
+        android:layout_below="@id/buttonScrollView"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/rounded_corner_button"
+        android:layout_height="500dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#eceee6"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="24dp"
+                android:background="#eceee6"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"
+                android:text="Soil Moisture"/>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barChart"
+                android:background="#eceee6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="58dp"
+        android:layout_below="@id/buttonScrollView"
+        android:layout_marginHorizontal="30dp"
+        android:layout_height="500dp"
+        android:visibility="gone">
+        <!-- Add your content for Card 2 here -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#eceee6"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:background="#eceee6"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:layout_marginTop="15dp"
+                android:text="Rain Drop Sensor"
+                />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/sunny"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sunny"
+                android:background="#eceee6"
+                android:visibility="visible"/>
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/notsunny"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#eceee6"
+                android:src="@drawable/raindrop"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card3"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="58dp"
+        android:layout_below="@id/buttonScrollView"
+        android:layout_marginHorizontal="30dp"
+        android:layout_height="500dp"
+        android:visibility="gone">
+        <!-- Add your content for Card 2 here -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#eceee6"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="24dp"
+                android:background="#eceee6"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/black"
+                android:text="Temperature"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:background="#eceee6"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/tempyes"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rounded_corner_button1"
+                    android:text="Temp Chart"
+                    android:textColor="@color/white"
+                    android:textSize="11dp" />
+
+                <Button
+                    android:id="@+id/tempid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rounded_corner_button"
+                    android:text="Temp"
+                    android:textColor="@color/black"
+                    android:textSize="11dp" />
+
+            </LinearLayout>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/barChart2"
+                android:background="#eceee6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/tempval1"
+                android:background="#eceee6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:textSize="62dp"
+                android:textColor="@color/black"
+                android:text="12.30"
+                android:visibility="gone"/>
+
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card4"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="58dp"
+        android:layout_below="@id/buttonScrollView"
+        android:layout_marginHorizontal="30dp"
+        android:layout_height="500dp"
+        android:visibility="gone">
+        <!-- Add your content for Card 2 here -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#eceee6"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:background="#eceee6"
+                android:textSize="24dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"
+                android:text="Humidity"/>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barChart1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#eceee6"
+                android:layout_marginBottom="30dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card5"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="58dp"
+        android:layout_below="@id/buttonScrollView"
+        android:layout_marginHorizontal="30dp"
+        android:layout_height="500dp"
+        android:background="#eceee6"
+        android:visibility="gone">
+        <!-- Add your content for Card 2 here -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#eceee6"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:background="#eceee6"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:layout_marginTop="15dp"
+                android:text="Water Pump Sensor"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:id="@+id/change"
+                android:layout_marginHorizontal="35dp"
+                android:text="change"/>
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/im1"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:src="@drawable/raindrop"
+                android:background="#eceee6"
+                android:visibility="gone"/>
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/im2"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:background="#eceee6"
+                android:src="@drawable/stopped"
+                android:visibility="visible"/>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "46710136787",
+    "project_id": "farmai-e6d69",
+    "storage_bucket": "farmai-e6d69.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46710136787:android:f341fa0589d61b02095926",
+        "android_client_info": {
+          "package_name": "com.example.farmai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAq_uWpk2NZ_7tnIN1mHiumvPbSUxwZvwQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

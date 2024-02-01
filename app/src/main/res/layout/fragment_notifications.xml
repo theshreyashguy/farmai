@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.notifications.NotificationsFragment">
+
+
+    <HorizontalScrollView
+        android:id="@+id/buttonScrollView"
+        android:layout_width="match_parent"
+        android:layout_marginTop="6dp"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/anamoly"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded_corner_button1"
+                android:textColor="@color/white"
+                android:textSize="11dp"
+                android:text="Anamoly Model"
+                />
+            <Button
+                android:id="@+id/nutrient"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded_corner_button"
+                android:textColor="@color/black"
+                android:textSize="11dp"
+                android:text="Crop Model"
+                />
+
+            <Button
+                android:id="@+id/Fertilizer"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded_corner_button"
+                android:textColor="@color/black"
+                android:textSize="11dp"
+                android:text="Fertilizer"
+                />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="58dp"
+
+        android:layout_below="@id/buttonScrollView"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/rounded_corner_button"
+        android:layout_height="500dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#eceee6"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="24dp"
+                android:background="#eceee6"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"
+                android:text="Anamoly Prediction"/>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_marginTop="6dp"
+                android:layout_height="wrap_content"
+                android:background="#ECEEE6"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ECEEE6"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/Temperature"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/rounded_corner_button1"
+                        android:textColor="@color/white"
+                        android:textSize="11dp"
+                        android:text="Temperature"
+                        />
+                    <Button
+                        android:id="@+id/Soil"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/rounded_corner_button"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
+                        android:text="Soil Moisture"
+                        />
+                    <Button
+                        android:id="@+id/humidity"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/rounded_corner_button"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
+                        android:text="Humidity"
+                        />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textSize="22dp"
+                android:background="#ECEEE6"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:text="Under Maintainance"/>
+
+
+
+           <Button
+               android:id="@+id/predict"
+               android:background="@drawable/rounded_corner_button1"
+               android:layout_width="250dp"
+               android:layout_gravity="center"
+               android:layout_marginTop="30dp"
+               android:layout_height="wrap_content"
+               android:text="Predict"
+               android:textColor="@color/white"
+               android:textAlignment="center"/>
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/resyes"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="12dp"
+                android:background="#ECEEE6"
+                android:src="@drawable/anamoly"
+                android:visibility="gone"/>
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/resno"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/notanomaly"
+                android:background="#ECEEE6"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="58dp"
+        android:layout_below="@id/buttonScrollView"
+        android:layout_marginHorizontal="30dp"
+        android:layout_height="500dp"
+        android:visibility="gone">
+        <!-- Add your content for Card 2 here -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#eceee6"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="21dp"
+                android:textSize="22dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:background="#ECEEE6"
+                android:text="Under Maintainance"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="34dp"
+                android:background="#ECEEE6"
+                android:layout_marginTop="22dp"
+                android:text="Nitrogen Level"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/nitro"
+                android:layout_width="154dp"
+                android:layout_marginStart="35dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter Nitrogen"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="12dp"
+                android:background="#ECEEE6"
+                android:text="P Level"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/phos"
+                android:layout_width="154dp"
+                android:layout_marginStart="35dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter Phosphorus"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="12dp"
+                android:text="K Level"
+                android:background="#ECEEE6"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/potas"
+                android:layout_width="154dp"
+                android:layout_marginStart="35dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter Postasium"/>
+
+
+
+            <Button
+                android:id="@+id/predict1"
+                android:background="@drawable/rounded_corner_button1"
+                android:layout_width="250dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                android:layout_height="wrap_content"
+                android:text="Predict"
+                android:textColor="@color/white"
+                android:textAlignment="center"/>
+
+
+            <TextView
+                android:id="@+id/output"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:textSize="22dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:background="#ECEEE6"
+                android:text="output"/>
+
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card3"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="58dp"
+        android:layout_below="@id/buttonScrollView"
+        android:layout_marginHorizontal="30dp"
+        android:layout_height="500dp"
+        android:visibility="visible">
+        <!-- Add your content for Card 2 here -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#eceee6"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="21dp"
+                android:textSize="22dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:background="#ECEEE6"
+                android:text="Under Maintainance"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="34dp"
+                android:background="#ECEEE6"
+                android:layout_marginTop="22dp"
+                android:text="Nitrogen Level"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/nitro1"
+                android:layout_width="154dp"
+                android:layout_marginStart="35dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter Nitrogen"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="12dp"
+                android:background="#ECEEE6"
+                android:text="P Level"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/phos1"
+                android:layout_width="154dp"
+                android:layout_marginStart="35dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter Phosphorus"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="12dp"
+                android:text="K Level"
+                android:background="#ECEEE6"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/potas1"
+                android:layout_width="154dp"
+                android:layout_marginStart="35dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter Postasium"/>
+
+
+
+            <Button
+                android:id="@+id/predict11"
+                android:background="@drawable/rounded_corner_button1"
+                android:layout_width="250dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                android:layout_height="wrap_content"
+                android:text="Predict"
+                android:textColor="@color/white"
+                android:textAlignment="center"/>
+
+
+            <TextView
+                android:id="@+id/output11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:textSize="22dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:background="#ECEEE6"
+                android:text="output"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+</RelativeLayout>
