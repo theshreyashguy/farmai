@@ -64,10 +64,3 @@ To ensure reliability, scalability, and continuous delivery, Farm AI utilizes De
 
 Contributions are welcome! Please fork the repository and create a pull request with your changes. Ensure to follow the coding standards and include appropriate tests.
 
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
----
-
-This README file provides a detailed overview of the Farm AI mobile app and backend infrastructure. Ensure to replace `path_to_logo_image`, `path_to_dashboard_screenshot`, and `path_to_irrigation_control_screenshot` with the actual paths to the images in your repository.
