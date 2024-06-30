@@ -1,6 +1,8 @@
 # Farm AI
 
-![Farm AI Logo](path_to_logo_image)
+
+![Farm AI Logo](https://github.com/theshreyashguy/farmai/assets/122010047/c738973a-bc58-4d38-9458-e4643aa54147)
+
 
 ## Introduction
 
@@ -21,8 +23,8 @@ The Farm AI mobile app provides a seamless user experience for farmers, offering
 
 ### Screenshots
 
-![Dashboard](path_to_dashboard_screenshot)
-![Irrigation Control](path_to_irrigation_control_screenshot)
+![Dashboard and Irrigation Control](https://github.com/theshreyashguy/farmai/assets/122010047/3542f9d2-60f9-41ce-b806-afadc538c41f)
+
 
 ## Backend (Node.js)
 
